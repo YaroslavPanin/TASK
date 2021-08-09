@@ -11,7 +11,8 @@ public class TASK227 {
             for (int i = 0; i < X.length; i++) {
                 for (int j = 0; j < X[i].length; j++) {
                     X[i][j]=Math.sin((Math.pow(i, 2)-Math.pow(j, 2))/n);
-                    System.out.print(X[i][j] + " ");
+                    System.out.printf("%.2f", X[i][j]);
+                    System.out.print(" ");
                     if (X[i][j] > 0) {
                         sum=sum+1;
                     }
