@@ -22,32 +22,33 @@ public class TASK228 {
         int stolb1 = v.nextInt();// Вввод первого номера столбца
         System.out.println("Введите второй номер столбца который необходимо поменять: ");
         int stolb2 = v.nextInt();// Вввод второго номера столбца
-
-
-        int[][] Y = new int[n][2];    // Доп матрица
-        for (int i = 0; i < Y.length; i++) {
-            for (int j = 0; j < Y[i].length; j++) {
-                if (j==0) {
-                    Y[i][j] = X[i][stolb1 - 1];
-                }
-                if (j==1) {
-                    Y[i][j] = X[i][stolb2 - 1];
+        if (stolb1>0 && stolb2>0 && stolb1<m && stolb2<m ) {
+            int[][] Y = new int[n][2];    // Доп матрица
+            for (int i = 0; i < Y.length; i++) {
+                for (int j = 0; j < Y[i].length; j++) {
+                    if (j == 0) {
+                        Y[i][j] = X[i][stolb1 - 1];
+                    }
+                    if (j == 1) {
+                        Y[i][j] = X[i][stolb2 - 1];
+                    }
                 }
             }
-        }
 
-        System.out.println("Матрица с поменяными столбцами:");
-        for (int i = 0; i < X.length; i++) {
-            for (int j = 0; j < X[i].length; j++) {
-                if ((stolb1-1)==j) {
-                    X[i][j]=Y[i][1];
+            System.out.println("Матрица с поменяными столбцами:");
+            for (int i = 0; i < X.length; i++) {
+                for (int j = 0; j < X[i].length; j++) {
+                    if ((stolb1 - 1) == j) {
+                        X[i][j] = Y[i][1];
+                    }
+                    if ((stolb2 - 1) == j) {
+                        X[i][j] = Y[i][0];
+                    }
+                    System.out.print(X[i][j] + "\t");
                 }
-                if ((stolb2-1)==j) {
-                    X[i][j]=Y[i][0];
-                }
-                System.out.print(X[i][j] + "\t");
+                System.out.println();
             }
-            System.out.println();
         }
+        else {System.out.println("Введено некорректное значение номеров столбцов, которые необходимо заменить");}
     }
 }
