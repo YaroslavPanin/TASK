@@ -10,30 +10,11 @@ public class TASK225 {
             System.out.println("Матрица:");
             for (int i = 0; i < X.length; i++) {
                 for (int j = 0; j < X[i].length; j++) {
-                    if (i<= (n/2)-1 & j<=(n/2)-1) {
-                        if (i<=j) {
-                        X[i][j]=1;
-                        }
-                        else {X[i][j]=0;}
-                    } // 1 Четверть
-                    if (i<= (n/2)-1 & j>=(n/2)) {
-                        if ((i+j-(n/2))>=(n/2)){
-                            X[i][j]=0;
-                        }
-                        else {X[i][j]=1;}
-                    } // 2 четверть
-                    if (i>= (n/2) & j<=(n/2)-1) {
-                        if ((i+j-(n/2))>=((n/2)-1)){
-                            X[i][j]=1;
-                        }
-                        else {X[i][j]=0;}
-                    }// 3 четверть
-                    if (i>= (n/2) & j>=(n/2)) {
-                        if (j>i){
-                            X[i][j]=0;
-                        }
-                        else {X[i][j]=1;}
-                    }  // 4 четверть
+
+                    if (j+i<n){
+                        X[i][j]=i+1;}
+                    else {X[i][j]=0;
+                    }
                     System.out.print(X[i][j] + " ");
                 }
                 System.out.println();
