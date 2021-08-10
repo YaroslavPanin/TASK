@@ -18,8 +18,8 @@ public class TASK2212 {
                 }
             System.out.println();
         }
-        System.out.println("Отсортированная матрица по возрастанию: ");
 
+        System.out.println("Отсортированная матрица по возрастанию: ");
         for (int i = 0; i < X.length; i++) {
             Arrays.sort(X[i]);  //Сортировка матрицы
             for (int j = 0; j < X[i].length; j++){
@@ -29,7 +29,6 @@ public class TASK2212 {
         }
 
         System.out.println("Отсортированная матрица по убыванию: ");
-
         for (int i = 0; i < X.length; i++) {
             Arrays.sort(X[i], Collections.reverseOrder());  //Сортировка матрицы
             for (int j = 0; j < X[i].length; j++){
@@ -37,5 +36,6 @@ public class TASK2212 {
             }
             System.out.println();
         }
+
     }
 }
