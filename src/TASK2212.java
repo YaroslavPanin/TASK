@@ -9,7 +9,7 @@ public class TASK2212 {
         int n = v.nextInt();// Вввод размерности матрицы
         System.out.println("Введите количество столбцов: ");
         int m = v.nextInt();// Вввод размерности матрицы
-        int[][] X = new int[n][m];
+        Integer[][] X = new Integer[n][m];
         System.out.println("Матрица:");
         for (int i = 0; i < X.length; i++) {
             for (int j = 0; j < X[i].length; j++){
@@ -18,10 +18,20 @@ public class TASK2212 {
                 }
             System.out.println();
         }
-        System.out.println("Отсортированная матрица: ");
+        System.out.println("Отсортированная матрица по возрастанию: ");
 
         for (int i = 0; i < X.length; i++) {
             Arrays.sort(X[i]);  //Сортировка матрицы
+            for (int j = 0; j < X[i].length; j++){
+                System.out.print(X[i][j] + "\t\t"); //Вывод отсортированной матрицы
+            }
+            System.out.println();
+        }
+
+        System.out.println("Отсортированная матрица по убыванию: ");
+
+        for (int i = 0; i < X.length; i++) {
+            Arrays.sort(X[i], Collections.reverseOrder());  //Сортировка матрицы
             for (int j = 0; j < X[i].length; j++){
                 System.out.print(X[i][j] + "\t\t"); //Вывод отсортированной матрицы
             }
